@@ -1,0 +1,14 @@
+# temporary files #
+###################
+*.swp
+.netrwhist
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+desktop.ini
+
+# IDE files #
+.vscode
+

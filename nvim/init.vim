@@ -15,23 +15,36 @@ if dein#check_install()
 endif
 filetype plugin indent on
 syntax enable
+colorscheme lucario
 "End dein Scripts-------------------------
 
 set encoding=utf-8
 
 set number        " show line numbers
-set ignorecase    " ignore case when search
+set ignorecase    " ignore cASe when search
 set smartcase     " consider UPPERCASE when search
 set wrapscan      " wrap scan when search
 set hls           " high light search results
 set ttimeoutlen=100
 
+set tabstop=2  " 
+set shiftwidth=0  " follow tabstop
+set softtabstop=-1  " follow shiftwidth
 set expandtab
-set tabstop=2     " 
-set shiftwidth=2  " width of tabs
-set softtabstop=2
-set autoindent
-set smartindent   " indent automatically
+set autoindent        " insert same amount of indent on new line
+set smartindent       " insert adjusted amount of indent
+
+autocmd FileType python setlocal tabstop=4 shiftwidth=0 expandtab
 
 let mapleader = "\<Space>"
+
+"change split orientations
+set splitbelow
+set splitright
+
+"nmap <S-CR> O<Esc>  " looking for how to use <S-CR> on CUI vim
+"hit Enter in normal mode to insert a line break
+nmap <CR> o<Esc>k    
+
+inoremap <C-]> <Esc><Right>
 

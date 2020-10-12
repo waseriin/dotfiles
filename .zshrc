@@ -203,8 +203,17 @@ source /tools/Xilinx/Vivado/2018.3/settings64.sh
 if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then
   exec tmux
 fi
+
 alias vi='nvim'
 alias ll='ls -laF'
-alias pbcopy='xclip -selection c'
-alias pbpaste='xclip -selection c -o'
+
+case ${OSTYPE} in
+  linux*)
+    alias open='xdg-open'
+    alias pbcopy='xclip -selection c'
+    alias pbpaste='xclip -selection c -o'
+    ;;
+  darwin*)
+    ;;
+esac
 

@@ -206,6 +206,7 @@ fi
 
 alias vi='nvim'
 alias ll='ls -laF'
+alias p='python3'
 
 case ${OSTYPE} in
   linux*)

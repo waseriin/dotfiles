@@ -1,0 +1,10 @@
+[include]
+  path = ~/.gitconfig.local
+[core]
+	quotepath = false
+	autocrlf = false
+[color]
+	ui = true
+[alias]
+  st = status
+  force-pull = !git fetch && git reset --hard origin/$(git current-branch)

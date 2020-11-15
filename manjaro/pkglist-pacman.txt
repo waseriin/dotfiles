@@ -1,0 +1,15 @@
+base-devel
+albert
+tmux
+fcitx-configtool
+fcitx-im
+yay
+code
+chromium
+neofetch
+python-pip
+guake
+
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji

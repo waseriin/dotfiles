@@ -195,26 +195,6 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
     ;;
 esac
 
-export GTK_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export QT_IM_MODULE=fcitx
-source /tools/Xilinx/Vivado/2018.3/settings64.sh
+# source /tools/Xilinx/Vivado/2018.3/settings64.sh
 
-if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then
-  exec tmux
-fi
-
-alias vi='nvim'
-alias ll='ls -laF'
-alias p='python3'
-
-case ${OSTYPE} in
-  linux*)
-    alias open='xdg-open'
-    alias pbcopy='xclip -selection c'
-    alias pbpaste='xclip -selection c -o'
-    ;;
-  darwin*)
-    ;;
-esac
-
+source ~/.common_rc

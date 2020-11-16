@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "SalmonOnIce",
+    "workbench.colorCustomizations": {
+        // color of the bar on bottom
+        "statusBar.background": "#333333",
+        "statusBar.noFolderBackground": "#333333",
+        "statusBar.debuggingBackground": "#333333",
+    },
+    "workbench.startupEditor": "newUntitledFile",
+}

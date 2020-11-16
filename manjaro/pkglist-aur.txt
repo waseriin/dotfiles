@@ -2,3 +2,4 @@ fcitx-mozc-ut-unified-full
 tweet-tray-bin
 ttf-hackgen
 ttf-ms-win10-japanese
+visual-studio-code-bin

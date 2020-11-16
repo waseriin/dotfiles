@@ -1,0 +1,18 @@
+[
+    // 統合terminalではCtrl+fをshellのキーバインドにする
+    {"key": "ctrl+f",    "command": "cursorRight",
+                            "when": "terminalFocus"},
+
+    // 統合terminalではCtrl+eをshellのキーバインドにする
+    {"key": "ctrl+e",    "command": "workbench.action.quickOpen",
+                            "when": "!terminalFocus"},
+    {"key": "ctrl+e",    "command": "-workbench.action.quickOpen"},
+
+    // 統合terminalではCtrl+pをshellのキーバインドにする
+    {"key": "ctrl+p",    "command": "workbench.action.quickOpen",
+                            "when": "!terminalFocus"},
+    {"key": "ctrl+p",    "command": "-workbench.action.quickOpen"},
+    
+    { "key": "ctrl+;", "command": "workbench.action.terminal.focus" },
+    { "key": "ctrl+;", "command": "workbench.action.focusActiveEditorGroup", "when":"terminalFocus" },
+]

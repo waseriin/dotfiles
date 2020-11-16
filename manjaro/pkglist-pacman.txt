@@ -4,7 +4,6 @@ tmux
 fcitx-configtool
 fcitx-im
 yay
-code
 chromium
 neofetch
 python-pip

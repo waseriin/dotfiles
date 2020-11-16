@@ -20,3 +20,6 @@ hook_add = '''
   map s <Plug>(easymotion-s2)
 '''
 
+[[plugins]]
+repo = 'tpope/vim-commentary'
+

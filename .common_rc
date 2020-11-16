@@ -1,4 +1,17 @@
-if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]]; then
+ENABLE_TMUX=false
+TERMINAL_NAME=`ps -o 'cmd=' -p $(ps -o 'ppid=' -p $$)`
+case $TERMINAL_NAME in
+  *"guake"*)
+    ENABLE_TMUX=true
+    ;;
+  *"vscode"*)
+    ;;
+  *"gnome-terminal-server"*)
+    ENABLE_TMUX=true
+    ;;
+esac
+
+if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]] && "${ENABLE_TMUX}"; then
   exec tmux
 fi
 

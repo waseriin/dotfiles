@@ -1,18 +1,29 @@
 [
-    // 統合terminalではCtrl+fをshellのキーバインドにする
+    // Disable Competing Keybindings in Terminal
     {"key": "ctrl+f",    "command": "cursorRight",
                             "when": "terminalFocus"},
-
-    // 統合terminalではCtrl+eをshellのキーバインドにする
     {"key": "ctrl+e",    "command": "workbench.action.quickOpen",
                             "when": "!terminalFocus"},
     {"key": "ctrl+e",    "command": "-workbench.action.quickOpen"},
-
-    // 統合terminalではCtrl+pをshellのキーバインドにする
     {"key": "ctrl+p",    "command": "workbench.action.quickOpen",
                             "when": "!terminalFocus"},
     {"key": "ctrl+p",    "command": "-workbench.action.quickOpen"},
     
-    { "key": "ctrl+;", "command": "workbench.action.terminal.focus" },
-    { "key": "ctrl+;", "command": "workbench.action.focusActiveEditorGroup", "when":"terminalFocus" },
+    // Focus on Terminal without mouse
+    { "key": "ctrl+;",    "command": "workbench.action.terminal.focus" },
+    { "key": "ctrl+;",    "command": "workbench.action.focusActiveEditorGroup", 
+                             "when":"terminalFocus" },
+    // Vim-ish Keybindings for Command Palette
+    { "key": "ctrl+j",    "command": "workbench.action.quickOpenSelectNext",
+                             "when": "inQuickOpen"},
+    { "key": "ctrl+k",    "command": "workbench.action.quickOpenSelectPrevious",
+                             "when": "inQuickOpen"},
+    { "key": "ctrl+[",    "command": "workbench.action.closeQuickOpen",
+                             "when": "inQuickOpen"},
+
+    // Vim-ish Keybindings for suggestions
+    { "key": "ctrl+j",    "command": "selectNextSuggestion",
+                             "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"},
+    { "key": "ctrl+k",    "command": "selectPrevSuggestion",
+                             "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"},
 ]

@@ -8,3 +8,5 @@
 [alias]
   st = status
   force-pull = !git fetch && git reset --hard origin/$(git current-branch)
+[pull]
+	rebase = false

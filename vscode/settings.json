@@ -7,4 +7,25 @@
         "statusBar.debuggingBackground": "#333333",
     },
     "workbench.startupEditor": "newUntitledFile",
+
+    "editor.minimap.enabled": false,
+    "editor.formatOnPaste": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.fontFamily": "'HackGenNerd Console', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 16,
+
+    "terminal.integrated.fontSize": 16,
+
+    "vim.whichwrap": "h,l,<,>,[,],b,s",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["x"],
+            "after": ["\"", "_", "x"]
+        },
+        {
+            "before": ["s"],
+            "after": ["\"", "_", "s"]
+        }
+    ],
 }

@@ -31,8 +31,13 @@
     // Focus on terminal without mouse
     {
         "key": "ctrl+;",
+        "command": "terminalHere.create",
+        "when": "!terminalIsOpen"
+    },
+    {
+        "key": "ctrl+;",
         "command": "workbench.action.terminal.focus",
-        "when": "!terminalFocus"
+        "when": "terminalIsOpen && !terminalFocus"
     },
     {
         "key": "ctrl+;",

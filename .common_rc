@@ -15,9 +15,15 @@ if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]] && "${ENABLE_TMUX}"; then
   exec tmux
 fi
 
+alias cp='cp -i'
+alias df='df -h'
+alias free='free -m'
+
 alias vi=nvim
 alias ll='ls -laF'
-alias p='python3'
+alias p=python3
+
+alias ide=~/.bin/ide.sh
 
 case ${OSTYPE} in
   linux*)

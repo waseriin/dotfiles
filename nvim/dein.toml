@@ -23,3 +23,5 @@ hook_add = '''
 [[plugins]]
 repo = 'tpope/vim-commentary'
 
+[[plugins]]
+repo = 'preservim/nerdtree'

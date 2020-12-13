@@ -34,6 +34,9 @@ set expandtab
 set autoindent        " insert same amount of indent on new line
 set smartindent       " insert adjusted amount of indent
 
+" w!! to save file as root
+cmap w!! w !sudo tee > /dev/null %
+
 " <S-Tab> for inverse tab
 " for normal mode
 nnoremap <S-Tab> <<
@@ -41,7 +44,7 @@ nnoremap <S-Tab> <<
 inoremap <S-tab> <C-d>
 
 " complement file path in insert mode
-inoremap <TAB><TAB> <C-x><C-f>
+" inoremap <TAB><TAB> <C-x><C-f>
 
 autocmd FileType python setlocal tabstop=4 shiftwidth=0 expandtab
 

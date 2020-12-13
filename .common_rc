@@ -24,6 +24,7 @@ alias ll='ls -laF'
 alias p=python3
 
 alias ide=~/.bin/ide.sh
+alias ut=~/.bin/run_urxvt.sh
 
 case ${OSTYPE} in
   linux*)

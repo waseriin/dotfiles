@@ -1,0 +1,10 @@
+{
+  "coc.preferences.formatOnType": true,
+  "languageserver": {
+    "rust": {
+      "command": "rustup",
+      "args": ["run", "stable", "rls"],
+      "filetypes": ["rust"]
+    }
+  }
+}

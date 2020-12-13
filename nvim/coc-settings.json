@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnType": true,
+  "python.jediEnabled": false,
   "languageserver": {
     "rust": {
       "command": "rustup",

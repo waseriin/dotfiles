@@ -1,0 +1,11 @@
+{
+  "coc.preferences.formatOnType": true,
+  "python.jediEnabled": false,
+  "languageserver": {
+    "rust": {
+      "command": "rustup",
+      "args": ["run", "stable", "rls"],
+      "filetypes": ["rust"]
+    }
+  }
+}

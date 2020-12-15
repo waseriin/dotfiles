@@ -22,3 +22,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 '["<Alt>0"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications '[]'
 gsettings set org.gnome.desktop.wm.keybindings switch-windows '["<Alt>Tab"]'
 
+# SpaceGray(Pro) background
+gsettings set org.gnome.desktop.background picture-uri none
+gsettings set org.gnome.desktop.background primary-color '#67686D'
+gsettings set org.gnome.desktop.background color-shading-type 'solid'

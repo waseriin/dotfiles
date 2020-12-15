@@ -34,6 +34,18 @@ set expandtab
 set autoindent        " insert same amount of indent on new line
 set smartindent       " insert adjusted amount of indent
 
+" w!! to save file as root
+cmap w!! w !sudo tee > /dev/null %
+
+" <S-Tab> for inverse tab
+" for normal mode
+nnoremap <S-Tab> <<
+" for insert mode
+inoremap <S-tab> <C-d>
+
+" complement file path in insert mode
+" inoremap <TAB><TAB> <C-x><C-f>
+
 autocmd FileType python setlocal tabstop=4 shiftwidth=0 expandtab
 
 let mapleader = "\<Space>"
@@ -47,4 +59,13 @@ set splitright
 nmap <CR> o<Esc>k    
 
 inoremap <C-]> <Esc><Right>
+
+set completeopt=menuone,noinsert
+" stop new line insertion when completion
+inoremap <expr><CR>  pumvisible() ? "<C-y>"  : "<CR>"
+inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
+inoremap <expr><C-p> pumvisible() ? "<Up>"   : "<C-p>"
+
+" toggle NERDTree with <C-e>
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 

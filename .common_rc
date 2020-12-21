@@ -26,12 +26,18 @@ alias p=python3
 alias ide=~/.bin/ide.sh
 alias ut=~/.bin/run_urxvt.sh
 
-case ${OSTYPE} in
-  linux*)
+ostype=$(uname -a)
+case ${ostype,,} in
+  *microsoft*)
+    source ~/.wsl_rc
+    alias pbcopy='clip.exe'
+    alias open='explorer.exe'
+    ;;
+  *linux*)
     alias open='xdg-open'
     alias pbcopy='xclip -selection c'
     alias pbpaste='xclip -selection c -o'
     ;;
-  darwin*)
+  *darwin*)
     ;;
 esac

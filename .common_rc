@@ -29,7 +29,7 @@ alias ut=~/.bin/run_urxvt.sh
 ostype=$(uname -a)
 case ${ostype,,} in
   *microsoft*)
-    source ~/.wsl_rc
+    source ~/.wslrc
     alias pbcopy='clip.exe'
     alias open='explorer.exe'
     ;;

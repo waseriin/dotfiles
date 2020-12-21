@@ -1,2 +1,7 @@
-umask 022
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+
+# Windows Path
+export PATH="$PATH:/mnt/c/Windows:/mnt/c/Windows/System32"
+
+# Docker Path
+export PATH=$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin

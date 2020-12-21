@@ -1,0 +1,9 @@
+neofetch
+tmux
+git
+pipenv
+pyenv
+n
+jq
+rust
+

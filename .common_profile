@@ -1,1 +1,6 @@
-export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
+
+export N_PREFIX="$HOME/.n"
+export PATH="$PATH:$N_PREFIX/bin"
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)

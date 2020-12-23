@@ -1,3 +1,7 @@
+wheel
 powerline-status
 requests
+neovim
+glances
+tldr
 

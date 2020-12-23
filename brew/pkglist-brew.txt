@@ -1,9 +1,9 @@
 neofetch
+neovim
 tmux
 git
-pipenv
-pyenv
 n
 jq
 rust
+tree
 

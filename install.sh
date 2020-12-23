@@ -12,6 +12,8 @@ do
     ln -snfv "$DOTPATH/$f" "$HOME/$f"
 done
 
+ln -snfv "$DOTPATH/nvim" "$HOME/.config/nvim"
+
 # distro-specific
 case ${OSTYPE} in
 	darwin*)

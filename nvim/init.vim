@@ -13,10 +13,10 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+"End dein Scripts-------------------------
 filetype plugin indent on
 syntax enable
-colorscheme lucario
-"End dein Scripts-------------------------
+colorscheme iceberg
 
 set encoding=utf-8
 
@@ -24,7 +24,7 @@ set number        " show line numbers
 set ignorecase    " ignore cASe when search
 set smartcase     " consider UPPERCASE when search
 set wrapscan      " wrap scan when search
-set hls           " high light search results
+set hls           " highlight search results
 set ttimeoutlen=100
 
 set tabstop=2  " 

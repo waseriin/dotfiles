@@ -9,6 +9,9 @@ case $TERMINAL_NAME in
   *"gnome-terminal-server"*)
     ENABLE_TMUX=true
     ;;
+  *"init"*)
+    ENABLE_TMUX=true
+    ;;
 esac
 
 if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]] && "${ENABLE_TMUX}"; then

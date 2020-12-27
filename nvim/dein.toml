@@ -35,6 +35,9 @@ hook_add = '''
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
 repo = 'preservim/nerdtree'
 
 [[plugins]]

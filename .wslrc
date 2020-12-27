@@ -5,3 +5,6 @@ export PATH="$PATH:/mnt/c/Windows:/mnt/c/Windows/System32"
 
 # Docker Path
 export PATH=$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin
+
+# disable cursor blink
+echo -e "\e[2 q"

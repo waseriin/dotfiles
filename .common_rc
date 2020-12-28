@@ -28,11 +28,10 @@ alias ide=~/.bin/ide.sh
 alias ut=~/.bin/run_urxvt.sh
 
 ostype=$(uname -a)
-case ${ostype,,} in
+case $(echo "$ostype" | tr '[:upper:]' '[:lower:]') in
   *microsoft*)
     source ~/.wslrc
     alias pbcopy='clip.exe'
-    alias open='explorer.exe'
     ;;
   *linux*)
     alias open='xdg-open'

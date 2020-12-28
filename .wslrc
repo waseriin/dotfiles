@@ -3,5 +3,8 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 # Windows Path
 export PATH="$PATH:/mnt/c/Windows:/mnt/c/Windows/System32"
 
+# open() command
+function open() { cmd.exe /c start $(wslpath -w $1) }
+
 # Docker Path
 export PATH=$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin

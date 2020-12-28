@@ -8,3 +8,6 @@ function open() { cmd.exe /c start $(wslpath -w $1) }
 
 # Docker Path
 export PATH=$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin
+
+# disable cursor blink
+echo -e "\e[2 q"

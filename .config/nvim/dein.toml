@@ -5,13 +5,23 @@ repo = 'Shougo/dein.vim'
 repo = 'raphamorim/lucario'
 
 [[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
   let g:airline_powerline_fonts = 1
+  let g:airline_extensions = ['branch', 'coc', 'tabline']
 '''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+  let g:airline_theme='iceberg'
+'''
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
@@ -23,6 +33,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'preservim/nerdtree'

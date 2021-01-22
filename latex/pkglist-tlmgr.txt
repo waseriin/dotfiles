@@ -4,4 +4,7 @@ jvlisting
 collection-latexrecommended
 collection-langjapanese
 latexmk
+plautopatch
+jlreq
+ptex-fontmaps
 

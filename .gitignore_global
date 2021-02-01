@@ -12,3 +12,8 @@ desktop.ini
 # IDE files #
 .vscode
 
+# Python files #
+__pycache__
+*.py[cod]
+*$py.class
+

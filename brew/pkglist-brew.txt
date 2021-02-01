@@ -6,4 +6,5 @@ n
 jq
 rust
 tree
+tcl-tk
 

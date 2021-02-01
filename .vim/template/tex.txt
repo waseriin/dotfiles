@@ -1,0 +1,5 @@
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\begin{document}
+
+\end{document}

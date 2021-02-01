@@ -69,3 +69,8 @@ inoremap <expr><C-p> pumvisible() ? "<Up>"   : "<C-p>"
 " toggle NERDTree with <C-e>
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+" compile `.tex` file to PDF automatically
+autocmd BufWritePost *.tex :!latexmk -quiet %:p
+" autocmd! BufRead *.tex :call jobstart('latexmk -pvc')
+autocmd! BufNewFile *.tex 0r ~/.vim/template/tex.txt
+

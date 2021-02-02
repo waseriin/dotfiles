@@ -44,3 +44,6 @@ case $(echo "$ostype" | tr '[:upper:]' '[:lower:]') in
   *darwin*)
     ;;
 esac
+
+eval `ssh-agent` > /dev/null && ssh-add 2> /dev/null
+

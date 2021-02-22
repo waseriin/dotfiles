@@ -1,7 +1,5 @@
 {
 	"segments": {
-    "left": [
-    ],
 		"right": [
 			{
 				"function": "powerline.segments.common.sys.uptime",
@@ -22,23 +20,8 @@
 					"istime": true
 				}
 			},
-			{
-				"function": "powerline.segments.common.net.hostname"
-			},
-      {
-        "function": "powerline.segments.common.wthr.weather"
-      },
-      {
-        "function": "powerlinemem.mem_usage.mem_usage_percent"
-      },
       {
         "function": "powerline.segments.common.net.network_load"
-      },
-      {
-        "function": "powerline.segments.common.net.external_ip"
-      },
-      {
-        "function": "powerline.segments.common.net.internal_ip"
       },
       {
         "function": "powerline.segments.common.bat.battery",

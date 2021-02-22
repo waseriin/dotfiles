@@ -33,16 +33,20 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
+hook_add = '''
+  " Assign Ctrl-/ to toggle comments like VSCode
+  xmap <C-_> <Plug>Commentary
+  nmap <C-_> <Plug>Commentary
+  omap <C-_> <Plug>Commentary
+  nmap <C-_> <Plug>CommentaryLine
+'''
 
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-
-[[plugins]]
-repo = 'preservim/nerdtree'
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-rev = 'release'
+merged = '0'
 hook_add = '''
   " TextEdit might fail if hidden is not set.
   set hidden
@@ -119,4 +123,22 @@ on_ft = 'rust'
 hook_add = '''
   let g:rustfmt_autosave = 0
 '''
+
+[[plugins]]
+repo = 'lervag/vimtex'
+on_ft=['tex']
+
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
+hook_add = '''
+  " Assign <C-w> to Vim Tmux Navigator commands
+  nnoremap <silent> <C-w>h :TmuxNavigateLeft<cr>
+  nnoremap <silent> <C-w>j :TmuxNavigateDown<cr>
+  nnoremap <silent> <C-w>k :TmuxNavigateUp<cr>
+  nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
+  nnoremap <silent> <C-w>\\ :TmuxNavigatePrevious<cr>
+'''
+
+[[plugins]]
+repo = 'tpope/vim-surround'
 

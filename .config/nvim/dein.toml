@@ -28,12 +28,15 @@ repo = 'easymotion/vim-easymotion'
 hook_add = '''
   let g:EasyMotion_do_mapping = 0
   let g:EasyMotion_smartcase = 1
-  nmap <Space>s <Plug>(easymotion-s2)
+  " nmap <Space>s <Plug>(easymotion-s2)
 '''
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
 hook_add = '''
+  " Support MATLAB file
+  autocmd FileType m setlocal commentstring=%\ %s
+
   " Assign Ctrl-/ to toggle comments like VSCode
   xmap <C-_> <Plug>Commentary
   nmap <C-_> <Plug>Commentary
@@ -41,8 +44,8 @@ hook_add = '''
   nmap <C-_> <Plug>CommentaryLine
 '''
 
-# [[plugins]]
-# repo = 'jiangmiao/auto-pairs'
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
@@ -104,12 +107,12 @@ hook_add = '''
 
   set pumblend=10
 
-  nmap <silent> <Space><Space> :<C-u>CocList<CR>
-  nmap <silent> <Space>h       :<C-u>call CocAction('doHover')<CR>
-  nmap <silent> <Space>df  <Plug>(coc-definition)
-  nmap <silent> <Space>rf  <Plug>(coc-reference)
-  nmap <silent> <Space>rn  <Plug>(coc-rename)
-  nmap <silent> <Space>fmt <Plug>(coc-format)
+  " nmap <silent> <Space><Space> :<C-u>CocList<CR>
+  " nmap <silent> <Space>h       :<C-u>call CocAction('doHover')<CR>
+  " nmap <silent> <Space>df  <Plug>(coc-definition)
+  " nmap <silent> <Space>rf  <Plug>(coc-reference)
+  " nmap <silent> <Space>rn  <Plug>(coc-rename)
+  " nmap <silent> <Space>fmt <Plug>(coc-format)
 
   inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 '''
@@ -119,26 +122,54 @@ repo = 'cespare/vim-toml'
 
 [[plugins]]
 repo = 'rust-lang/rust.vim'
-on_ft = 'rust'
+on_ft = ['rust']
 hook_add = '''
   let g:rustfmt_autosave = 0
 '''
 
 [[plugins]]
 repo = 'lervag/vimtex'
-on_ft=['tex']
-
-[[plugins]]
-repo = 'christoomey/vim-tmux-navigator'
-hook_add = '''
-  " Assign <C-w> to Vim Tmux Navigator commands
-  nnoremap <silent> <C-w>h :TmuxNavigateLeft<cr>
-  nnoremap <silent> <C-w>j :TmuxNavigateDown<cr>
-  nnoremap <silent> <C-w>k :TmuxNavigateUp<cr>
-  nnoremap <silent> <C-w>l :TmuxNavigateRight<cr>
-  nnoremap <silent> <C-w>\\ :TmuxNavigatePrevious<cr>
-'''
+on_ft = ['tex']
 
 [[plugins]]
 repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add = '''
+  autocmd BufNewFile,BufRead *.crs setf rust
+  autocmd BufNewFile,BufRead *. rs let g:quickrun_config.rust = {'exec' : 'cargo run'}
+  autocmd BufNewFile,BufRead *.crs let g:quickrun_config.rust = {'exec' : 'cargo script %s -- %a'}
+
+  cmap qr QuickRun
+  cmap QR QuickRun
+
+  command! -nargs=0 QC call CloseQuickRunWindow()
+  function! CloseQuickRunWindow()
+    execute "normal \<c-c>\<c-w>jZZ"
+  endfunction
+  cmap qc QC
+'''
+
+[[plugins]]
+repo = 'gabrielelana/vim-markdown'
+hook_add = '''
+  let g:markdown_mapping_switch_status = 't'
+  let g:markdown_enable_spell_checking = 0
+'''
+
+[[plugins]]
+repo = 'iamcco/markdown-preview.nvim'
+on_ft = ['markdown', 'pandoc.markdown', 'rmd']
+build = 'sh -c "cd app & yarn install"'
+hook_add = '''
+  cmap mp MarkdownPreview
+  cmap MP MarkdownPreview
+'''
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+hook_add = '''
+  let g:openbrowser_browser_commands = [ {'name': 'firefox', 'args': ['{browser}', '{uri}']} ]
+'''
 

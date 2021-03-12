@@ -25,7 +25,7 @@ set ignorecase    " ignore cASe when search
 set smartcase     " consider UPPERCASE when search
 set wrapscan      " wrap scan when search
 set hls           " highlight search results
-set ttimeoutlen=100
+set ttimeoutlen=10
 
 set tabstop=2  " 
 set shiftwidth=0  " follow tabstop
@@ -33,6 +33,8 @@ set softtabstop=-1  " follow shiftwidth
 set expandtab
 set autoindent        " insert same amount of indent on new line
 set smartindent       " insert adjusted amount of indent
+
+nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 
 " w!! to save file as root
 cmap w!! w !sudo tee > /dev/null %
@@ -43,12 +45,7 @@ nnoremap <S-Tab> <<
 " for insert mode
 inoremap <S-tab> <C-d>
 
-" complement file path in insert mode
-" inoremap <TAB><TAB> <C-x><C-f>
-
 autocmd FileType python setlocal tabstop=4 shiftwidth=0 expandtab
-
-let mapleader = "\<Space>"
 
 "change split orientations
 set splitbelow
@@ -56,7 +53,7 @@ set splitright
 
 "nmap <S-CR> O<Esc>  " looking for how to use <S-CR> on CUI vim
 "hit Enter in normal mode to insert a line break
-nmap <CR> o<Esc>k    
+" nmap <CR> o<Esc>k
 
 inoremap <C-]> <Esc><Right>
 
@@ -72,4 +69,8 @@ autocmd! BufNewFile *.tex 0r ~/.vim/template/tex.txt
 
 " enable aliases for vim internal shell
 set shellcmdflag=-ic
+
+autocmd BufWritePost init.vim source %
+
+inoremap <silent> <A-t> <C-R>=strftime("%y%m%d (%a)\n")<CR>
 

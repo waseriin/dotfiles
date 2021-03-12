@@ -1,5 +1,11 @@
 \RequirePackage{plautopatch}
 \documentclass[uplatex,dvipdfmx]{jlreq}
+
+\newcommand{\figref}[1]{Fig~\ref{#1}}
+\newcommand{\tabref}[1]{Tab~\ref{#1}}
+\newcommand{\eqref}[1]{Eq~\ref{#1}}
+
 \begin{document}
 
 \end{document}
+

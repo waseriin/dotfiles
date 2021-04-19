@@ -5,7 +5,16 @@
 \newcommand{\tabref}[1]{Tab~\ref{#1}}
 \newcommand{\eqref}[1]{Eq~\ref{#1}}
 
+\title{}
+\author{}
+\date{}
+
 \begin{document}
+
+\maketitle
+
+\section{}
+  \subsection{}
 
 \end{document}
 

@@ -151,12 +151,30 @@ hook_add = '''
   cmap qc QC
 '''
 
+# [[plugins]]
+# repo = 'godlygeek/tabular'
+
+# [[plugins]]
+# repo = 'plasticboy/vim-markdown'
+# hook_add = '''
+#   let g:vim_markdown_folding_disabled = 1
+#   let g:vim_markdown_toc_autofit = 1
+# '''
+
 [[plugins]]
-repo = 'gabrielelana/vim-markdown'
+repo = 'orel1/vim-markdown'
 hook_add = '''
   let g:markdown_mapping_switch_status = 't'
   let g:markdown_enable_spell_checking = 0
+  let g:markdown_indent_lenght = 4
 '''
+
+# [[plugins]]
+# repo = 'gabrielelana/vim-markdown'
+# hook_add = '''
+#   let g:markdown_mapping_switch_status = 't'
+#   let g:markdown_enable_spell_checking = 0
+# '''
 
 [[plugins]]
 repo = 'iamcco/markdown-preview.nvim'
@@ -171,5 +189,16 @@ hook_add = '''
 repo = 'tyru/open-browser.vim'
 hook_add = '''
   let g:openbrowser_browser_commands = [ {'name': 'firefox', 'args': ['{browser}', '{uri}']} ]
+'''
+
+[[plugins]]
+repo = '907th/vim-auto-save'
+hook_add = '''
+  let g:auto_save = 0
+  let g:auto_save_silent = 1
+  augroup ft_markdown
+    au!
+    au FileType markdown let b:auto_save = 1
+  augroup END
 '''
 

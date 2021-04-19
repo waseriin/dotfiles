@@ -46,6 +46,7 @@ nnoremap <S-Tab> <<
 inoremap <S-tab> <C-d>
 
 autocmd FileType python setlocal tabstop=4 shiftwidth=0 expandtab
+autocmd FileType markdown setlocal tabstop=4 shiftwidth=0 expandtab
 
 "change split orientations
 set splitbelow

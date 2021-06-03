@@ -1,4 +1,4 @@
-wget http://ftp.jaist.ac/jp/pub/CTAN/systems/texlive/tlnet/install-tl.zip
+wget http://ftp.jaist.ac.jp/pub/CTAN/systems/texlive/tlnet/install-tl.zip
 unzip install-tl.zip
 cd install-tl-*
 sudo ./install-tl

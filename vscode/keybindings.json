@@ -1,5 +1,6 @@
 [
     // Disable competing keybindings in terminal
+    // ターミナルと競合するショートカットを無効化
     {
         "key": "ctrl+f",
         "command": "cursorRight",
@@ -28,10 +29,13 @@
         "key": "ctrl+p",
         "command": "-workbench.action.quickOpen"
     },
+
     // Focus on terminal without mouse
+    // `Ctrl+;`でターミナルを行き来する | US配列を想定
+    // ターミナルを非表示にしたいときはデフォルトの`Ctrl-J`を使う
     {
         "key": "ctrl+;",
-        "command": "terminalHere.create",
+        "command": "workbench.action.togglePanel",
         "when": "!terminalIsOpen"
     },
     {
@@ -44,7 +48,9 @@
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
+
     // Vim-ish keybindings for command palette
+    // コマンドパレットの選択を`Ctrl+J/K`で移動できるようにする
     {
         "key": "ctrl+j",
         "command": "workbench.action.quickOpenSelectNext",
@@ -60,7 +66,9 @@
         "command": "workbench.action.closeQuickOpen",
         "when": "inQuickOpen"
     },
+
     // Emacs-ish keybindings for command palette
+    // コマンドパレットの選択を`Ctrl+N/P`で移動できるようにする
     {
         "key": "ctrl+n",
         "command": "workbench.action.quickOpenSelectNext",
@@ -71,7 +79,9 @@
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
     },
+
     // Vim-ish keybindings for suggestions
+    // サジェストの選択を`Ctrl+J/K`で移動できるようにする
     {
         "key": "ctrl+j",
         "command": "selectNextSuggestion",
@@ -82,7 +92,9 @@
         "command": "selectPrevSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
+
     // Suppress FindReplaceAction in command palette
+    // コマンドパレット内でショートカットの誤爆軽減
     {
         "key": "ctrl+h",
         "command": "editor.action.startFindReplaceAction",
@@ -99,6 +111,7 @@
     },
 
     // Better Ctrl + Tab
+    // Ctrl+Tabの切り替えをChromeなどのブラウザと同じ挙動にする
     {
         "key": "ctrl+shift+tab",
         "command": "workbench.action.previousEditor"
@@ -107,4 +120,18 @@
         "key": "ctrl+tab",
         "command": "workbench.action.nextEditor"
     },
+
+    // Toggle Vim
+    // Vimの有効/無効を切り替え
+    {
+        "key": "ctrl+alt+v",
+        "command": "toggleVim"
+    },
+
+
+    {
+        "key": "ctrl+k v",
+        "command": "-markdown.showPreviewToSide",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    }
 ]

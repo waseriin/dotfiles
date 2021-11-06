@@ -49,6 +49,7 @@ repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
+rev = 'release'
 merged = '0'
 hook_add = '''
   " TextEdit might fail if hidden is not set.

@@ -12,6 +12,9 @@ case $TERMINAL_NAME in
   *"init"*)
     ENABLE_TMUX=true
     ;;
+  *"tilix"*)
+    ENABLE_TMUX=true
+    ;;
 esac
 
 if [ -t 0 ] && [[ -z $TMUX ]] && [[ $- = *i* ]] && "${ENABLE_TMUX}"; then

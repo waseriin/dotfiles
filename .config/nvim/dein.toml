@@ -29,6 +29,8 @@ hook_add = '''
   let g:EasyMotion_do_mapping = 0
   let g:EasyMotion_smartcase = 1
   " nmap <Space>s <Plug>(easymotion-s2)
+  map <Leader> <Plug>(easymotion-prefix)
+  nmap s <Plug>(easymotion-overwin-f2)
 '''
 
 [[plugins]]

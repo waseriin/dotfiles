@@ -7,4 +7,5 @@ jq
 rust
 tree
 tcl-tk
+python-tk
 

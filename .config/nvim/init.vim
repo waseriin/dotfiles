@@ -29,7 +29,6 @@ nnoremap <S-Tab> <<
 inoremap <S-tab> <C-d>
 
 autocmd FileType python setlocal tabstop=4 shiftwidth=0 expandtab
-autocmd FileType markdown setlocal tabstop=4 shiftwidth=0 expandtab
 
 "change split orientations
 set splitbelow
@@ -75,7 +74,7 @@ if dein#check_install()
 endif
 "End dein Scripts-------------------------
 
-colorscheme iceberg
+colorscheme nord
 filetype plugin indent on
 syntax enable
 

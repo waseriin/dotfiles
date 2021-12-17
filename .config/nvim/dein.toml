@@ -8,6 +8,9 @@ repo = 'raphamorim/lucario'
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
+repo = 'arcticicestudio/nord-vim'
+
+[[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
   let g:airline_powerline_fonts = 1
@@ -203,5 +206,20 @@ hook_add = '''
     au!
     au FileType markdown let b:auto_save = 1
   augroup END
+'''
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+
+[[plugins]]
+repo = 'kkoomen/vim-doge'
+hook_add = '''
+  let g:doge_doc_standard_python = 'google'
 '''
 
